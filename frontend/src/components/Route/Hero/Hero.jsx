@@ -32,18 +32,18 @@ const Hero = () => {
                     and build community. Everything from textbooks to furniture, <br />
                     electronics to USF gear - all within walking distance.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                    <Link to="/products" className="inline-block">
-                        <div className="bg-green-400 hover:bg-green-500 transition-all duration-300 px-8 py-3 rounded-lg text-black font-semibold text-lg shadow-lg hover:shadow-green-400/25">
-                            Start Trading
+                                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                            <Link to="/products" className="inline-block">
+                                <div className="bg-green-400 hover:bg-green-500 transition-all duration-300 px-8 py-3 rounded-lg text-black font-semibold text-lg shadow-lg hover:shadow-green-400/25">
+                                    Browse & Buy
+                                </div>
+                            </Link>
+                            <Link to="/shop-create" className="inline-block">
+                                <div className="border-2 border-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 px-8 py-3 rounded-lg text-green-400 font-semibold text-lg">
+                                    Sell Your Items
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
-                    <Link to="/shop-create" className="inline-block">
-                        <div className="border-2 border-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 px-8 py-3 rounded-lg text-green-400 font-semibold text-lg">
-                            Sell Your Items
-                        </div>
-                    </Link>
-                </div>
             </div>
 
         </div>
