@@ -66,7 +66,7 @@ const ProductCard = ({ data, isEvent }) => {
 
     return (
         <>
-            <div className='w-full h-[370px] bg-white rounded-lg shadow-sm p-3 relative cursor-pointer'>
+            <div className='w-full h-[370px] bg-gray-800 rounded-lg shadow-lg p-3 relative cursor-pointer border border-gray-700 hover:border-green-400 hover:shadow-green-400/20 transition-all duration-300 group'>
                 <div className='flex justify-end'>
                 </div>
 
@@ -81,7 +81,7 @@ const ProductCard = ({ data, isEvent }) => {
                     <h5 className={`${styles.shop_name}`} >{data.shop.name}</h5>
                 </Link>
                 <Link to={`/product/${data._id}`}>
-                    <h4 className='pb-3 font-[500]'>
+                    <h4 className='pb-3 font-[500] text-white group-hover:text-green-400 transition-colors duration-300'>
                         {data.name.length > 40 ? data.name.slice(0, 40) + '...' : data.name}
                     </h4>
                     {/* Star Rating */}
@@ -100,7 +100,7 @@ const ProductCard = ({ data, isEvent }) => {
                             </h4>
                         </div>
 
-                        <span className="font-[400] text-[17px] text-[#68d284]">
+                        <span className="font-[400] text-[17px] text-green-400">
                             {data?.sold_out} sold
                         </span>
                     </div>
@@ -112,34 +112,30 @@ const ProductCard = ({ data, isEvent }) => {
                         click ? (
                             <AiFillHeart
                                 size={22}
-                                className="cursor-pointer absolute right-2 top-5"
+                                className="cursor-pointer absolute right-2 top-5 text-red-500 hover:text-red-400 transition-colors duration-300"
                                 onClick={() => removeFromWishlistHandler(data)}
-                                color={click ? "red" : "#333"}
                                 title='Remove from wishlist'
                             />
                         ) : (
                             <AiOutlineHeart
                                 size={22}
-                                className="cursor-pointer absolute right-2 top-5"
+                                className="cursor-pointer absolute right-2 top-5 text-gray-400 hover:text-red-500 transition-colors duration-300"
                                 onClick={() => addToWishlistHandler(data)}
-                                color={click ? "red" : "#333"}
                                 title='Add to wishlist'
 
                             />
                         )}
                     <AiOutlineEye
                         size={22}
-                        className="cursor-pointer absolute right-2 top-14"
+                        className="cursor-pointer absolute right-2 top-14 text-gray-400 hover:text-green-400 transition-colors duration-300"
                         onClick={() => setOpen(!open)}
-                        color="#333"
                         title='Quick view'
                     />
 
                     <AiOutlineShoppingCart
                         size={25}
-                        className="cursor-pointer absolute right-2 top-24"
+                        className="cursor-pointer absolute right-2 top-24 text-gray-400 hover:text-green-400 transition-colors duration-300"
                         onClick={() => addToCartHandler(data._id)}
-                        color="#444"
                         title='Add to cart'
                     />
                     {open ? <ProductDetailsCard setOpen={setOpen} data={data} /> : null}
