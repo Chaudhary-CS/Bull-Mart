@@ -70,10 +70,10 @@ const ShopCreate = () => {
         <div className='min-h-screen bg-black flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
             <div className='sm:mx-auto sm:w-full sm:max-w-md'>
                 <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
-                    Register as a Seller
+                    Register as a Student Seller
                 </h2>
                 <p className="mt-2 text-center text-sm text-gray-400">
-                    Join USF's student marketplace and start selling
+                    Join USF's student marketplace and start selling your items
                 </p>
             </div>
             <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-[35rem]'>
@@ -84,13 +84,13 @@ const ShopCreate = () => {
                             <label htmlFor="name"
                                 className='block text-sm font-medium text-green-400'
                             >
-                                Shop Name
+                                Student Name
                             </label>
                             <div className='mt-1'>
                                 <input type="name"
                                     name='name'
                                     required
-                                    placeholder="Enter your shop name"
+                                    placeholder="Enter your full name"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     className='appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300'
@@ -110,7 +110,7 @@ const ShopCreate = () => {
                                     name='phone-number'
                                     autoComplete='password'
                                     required
-                                    placeholder="Enter your phone number"
+                                    placeholder="Enter your USF phone number"
                                     value={phoneNumber}
                                     onChange={(e) => setPhoneNumber(e.target.value)}
                                     className='appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300'
@@ -125,7 +125,7 @@ const ShopCreate = () => {
                                 htmlFor="email"
                                 className="block text-sm font-medium text-green-400"
                             >
-                                Email Address
+                                USF Email Address
                             </label>
                             <div className="mt-1">
                                 <input
@@ -133,7 +133,7 @@ const ShopCreate = () => {
                                     name="email"
                                     autoComplete="email"
                                     required
-                                    placeholder="Enter your email address"
+                                    placeholder="Enter your USF email address"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300"
@@ -147,14 +147,14 @@ const ShopCreate = () => {
                                 htmlFor="email"
                                 className="block text-sm font-medium text-green-400"
                             >
-                                Address
+                                Campus Address
                             </label>
                             <div className="mt-1">
                                 <input
                                     type="address"
                                     name="address"
                                     required
-                                    placeholder="Enter your address"
+                                    placeholder="Enter your campus address or dorm"
                                     value={address}
                                     onChange={(e) => setAddress(e.target.value)}
                                     className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300"
@@ -169,14 +169,14 @@ const ShopCreate = () => {
                                 htmlFor="email"
                                 className="block text-sm font-medium text-green-400"
                             >
-                                Zip Code
+                                USF Zip Code
                             </label>
                             <div className="mt-1">
                                 <input
                                     type="number"
                                     name="zipcode"
                                     required
-                                    placeholder="Enter your zip code"
+                                    placeholder="Enter USF campus zip code (33620)"
                                     value={zipCode}
                                     onChange={(e) => setZipCode(e.target.value)}
                                     className="appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300"
@@ -261,12 +261,12 @@ const ShopCreate = () => {
                                 type='submit'
                                 className='group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-green-400 hover:bg-green-500 transition-all duration-300 shadow-lg hover:shadow-green-400/25'
                             >
-                                Submit
+                                Register as Student Seller
                             </button>
                         </div>
 
                         <div className={`${styles.noramlFlex} w-full justify-center`} >
-                            <h4 className="text-gray-300">Already have an account?</h4>
+                            <h4 className="text-gray-300">Already have a seller account?</h4>
                             <Link to="/shop-login" className="text-green-400 hover:text-green-300 pl-2 transition-colors duration-300">
                                 Sign In
                             </Link>
