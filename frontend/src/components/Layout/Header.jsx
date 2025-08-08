@@ -60,20 +60,17 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between ">
           <div>
             <Link to="/">
-              <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                alt=""
-              />
+              <span className="text-2xl font-bold text-brand.primary">Bull-<span className="text-brand.accent">Mart</span></span>
             </Link>
           </div>
           {/*Search box  */}
           <div className="w-[50%] relative">
             <input
               type="text"
-              placeholder="Search for product..."
+              placeholder="Search used products..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-[40px] w-full px-2 border-[#3957db] border-[2px] rounded-md"
+              className="h-[40px] w-full px-2 border-brand.primary border-[2px] rounded-md"
             />
             <AiOutlineSearch
               size={30}

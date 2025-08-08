@@ -8,6 +8,15 @@ module.exports = {
       Poppins: ["Poppins", "sans-serif"],
     },
     extend: {
+      colors: {
+        brand: {
+          black: "#0b0f0e",
+          dark: "#0f172a",
+          primary: "#16a34a",
+          primaryDark: "#065f46",
+          accent: "#22c55e",
+        },
+      },
       screens: {
         "1000px": "1050px",
         "1100px": "1110px",
