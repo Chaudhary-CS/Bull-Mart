@@ -81,7 +81,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-brand.black text-white">
+    <div className="min-h-screen bg-black text-white">
       <BrowserRouter>
         {stripeApikey && (
           <Elements stripe={loadStripe(stripeApikey)}>
