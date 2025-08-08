@@ -5,15 +5,15 @@ export const navItems = [
     url: "/",
   },
   {
-    title: "Best Selling",
+    title: "Trending",
     url: "/best-selling",
   },
   {
-    title: "Products",
+    title: "Browse",
     url: "/products",
   },
   {
-    title: "Events",
+    title: "Deals",
     url: "/events",
   },
   {
@@ -26,8 +26,8 @@ export const navItems = [
 export const brandingData = [
   {
     id: 1,
-    title: "Free Shipping",
-    Description: "From all orders over 100$",
+    title: "Campus Pickup",
+    Description: "Meet on campus, save shipping",
     icon: (
       <svg
         width="36"
@@ -76,8 +76,8 @@ export const brandingData = [
   },
   {
     id: 2,
-    title: "Daily Surprise Offers",
-    Description: "Save up to 25% off",
+    title: "Student Deals",
+    Description: "Save up to 70% off retail",
     icon: (
       <svg
         width="32"
@@ -191,72 +191,73 @@ export const brandingData = [
 export const categoriesData = [
   {
     id: 1,
-    title: "Computers and Laptops",
-    subTitle: "",
+    title: "Electronics",
+    subTitle: "Laptops, phones, tablets",
     image_Url:
-      "https://cdn.shopify.com/s/files/1/1706/9177/products/NEWAppleMacbookProwithM1ProChip14InchLaptop2021ModelMKGQ3LL_A_16GB_1TBSSD_custommacbd.jpg?v=1659592838",
+      "https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 2,
-    title: "cosmetics and body care",
-    subTitle: "",
+    title: "Textbooks",
+    subTitle: "Course materials & study guides",
     image_Url:
-      "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-07/kosme1.png",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
   },
   {
     id: 3,
-    title: "Accesories",
-    subTitle: "",
+    title: "Furniture",
+    subTitle: "Dorm & apartment essentials",
     image_Url:
-      "https://img.freepik.com/free-vector/ordering-goods-online-internet-store-online-shopping-niche-e-commerce-website-mother-buying-babies-clothes-footwear-toys-infant-accessories_335657-2345.jpg?w=2000",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 4,
-    title: "Cloths",
-    subTitle: "",
+    title: "Clothing",
+    subTitle: "USF gear & casual wear",
     image_Url:
-      "https://www.shift4shop.com/2015/images/industries/clothing/clothing-apparel.png",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 5,
-    title: "Shoes",
-    subTitle: "",
+    title: "Sports & Fitness",
+    subTitle: "Equipment & activewear",
     image_Url:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBQPQMVNRd6TtDkGs2dCri0Y-rxKkFOiEWw&usqp=CAU",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 6,
-    title: "Gifts",
-    subTitle: "",
+    title: "Beauty & Personal Care",
+    subTitle: "Skincare, makeup, hygiene",
     image_Url:
-      "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 7,
-    title: "Pet Care",
-    subTitle: "",
-    image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+    title: "Gaming & Entertainment",
+    subTitle: "Consoles, games, accessories",
+    image_Url:
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 8,
-    title: "Mobile and Tablets",
-    subTitle: "",
+    title: "Transportation",
+    subTitle: "Bikes, scooters, parking passes",
     image_Url:
-      "https://st-troy.mncdn.com/mnresize/1500/1500/Content/media/ProductImg/original/mpwp3tua-apple-iphone-14-256gb-mavi-mpwp3tua-637986832343472449.jpg",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 9,
-    title: "Music and Gaming",
-    subTitle: "",
+    title: "Kitchen & Dining",
+    subTitle: "Appliances, cookware, meal prep",
     image_Url:
-      "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
   {
     id: 10,
-    title: "Others",
-    subTitle: "",
+    title: "Everything Else",
+    subTitle: "Unique finds & miscellaneous",
     image_Url:
-      "https://searchspring.com/wp-content/uploads/2022/10/Hero-Image-Platform-Others-2.png",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
   },
 ];
 
@@ -593,18 +594,18 @@ export const productData = [
 
 export const footerProductLinks = [
   {
-    name: "About us",
+    name: "About Bull-Mart",
     link: "/about",
   },
   {
-    name: "Careers",
-    link: "/carrers",
+    name: "USF Campus",
+    link: "/campus",
   },
   {
-    name: "Store Locations",
+    name: "Student Resources",
   },
   {
-    name: "Our Blog",
+    name: "Sustainability",
   },
   {
     name: "Reviews",
@@ -613,19 +614,19 @@ export const footerProductLinks = [
 
 export const footercompanyLinks = [
   {
-    name: "Game & Video",
+    name: "Electronics",
   },
   {
-    name: "Phone &Tablets",
+    name: "Textbooks",
   },
   {
-    name: "Computers & Laptop",
+    name: "Furniture",
   },
   {
-    name: "Sport Watches",
+    name: "Clothing",
   },
   {
-    name: "Events",
+    name: "Sports & Fitness",
   },
 ];
 

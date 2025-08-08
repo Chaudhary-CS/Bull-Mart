@@ -10,11 +10,15 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          black: "#0b0f0e",
-          dark: "#0f172a",
+          black: "#0a0a0a",
+          dark: "#111827",
+          darker: "#0f172a",
           primary: "#16a34a",
           primaryDark: "#065f46",
           accent: "#22c55e",
+          neon: "#00ff88",
+          mint: "#10b981",
+          forest: "#059669",
         },
       },
       screens: {

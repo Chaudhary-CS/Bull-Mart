@@ -67,10 +67,10 @@ const Header = ({ activeHeading }) => {
           <div className="w-[50%] relative">
             <input
               type="text"
-              placeholder="Search used products..."
+              placeholder="Search textbooks, electronics, furniture..."
               value={searchTerm}
               onChange={handleSearchChange}
-              className="h-[40px] w-full px-2 border-brand.primary border-[2px] rounded-md"
+              className="h-[40px] w-full px-2 border-brand.primary border-[2px] rounded-md bg-brand.dark text-white placeholder-gray-400"
             />
             <AiOutlineSearch
               size={30}
@@ -107,7 +107,7 @@ const Header = ({ activeHeading }) => {
           <div className={`${styles.button}`}>
             <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
               <h1 className="text-[#fff] flex items-center">
-                {isSeller ? "Go Dashboard" : "Become Seller"}{" "}
+                {isSeller ? "Dashboard" : "Start Selling"}{" "}
                 <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
