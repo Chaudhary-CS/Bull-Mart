@@ -37,12 +37,23 @@ const Footer = () => {
             <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
                 <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
                     <div className="flex items-center space-x-3 mb-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-brand.neon to-brand.mint rounded-xl flex items-center justify-center shadow-lg">
-                            <span className="text-brand.black font-bold text-2xl">B</span>
+                        <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                            <img 
+                                src="https://www.usf.edu/images/logo.png" 
+                                alt="USF Bulls" 
+                                className="w-full h-full object-contain"
+                                onError={(e) => {
+                                    e.target.style.display = 'none';
+                                    e.target.nextSibling.style.display = 'flex';
+                                }}
+                            />
+                            <div className="w-full h-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center" style={{display: 'none'}}>
+                                <span className="text-black font-bold text-xl">USF</span>
+                            </div>
                         </div>
                         <div>
-                            <h1 className="text-brand.neon text-3xl font-bold">Bull-</h1>
-                            <h1 className="text-brand.mint text-3xl font-bold">Mart</h1>
+                            <h1 className="text-green-400 text-3xl font-bold">Bull-</h1>
+                            <h1 className="text-green-500 text-3xl font-bold">Mart</h1>
                         </div>
                     </div>
                     <p className="text-gray-300">USF's student marketplace for sustainable trading and community building.</p>

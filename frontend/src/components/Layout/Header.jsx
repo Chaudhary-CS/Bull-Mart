@@ -61,8 +61,19 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-black font-bold text-xl">B</span>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                  <img 
+                    src="https://www.usf.edu/images/logo.png" 
+                    alt="USF Bulls" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="w-full h-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center" style={{display: 'none'}}>
+                    <span className="text-black font-bold text-lg">USF</span>
+                  </div>
                 </div>
                 <div>
                   <span className="text-2xl font-bold text-green-400">Bull-</span>
