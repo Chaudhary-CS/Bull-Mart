@@ -60,22 +60,32 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between ">
           <div>
             <Link to="/">
-              <span className="text-2xl font-bold text-brand.primary">Bull-<span className="text-brand.accent">Mart</span></span>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-brand.neon to-brand.mint rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-brand.black font-bold text-xl">B</span>
+                </div>
+                <div>
+                  <span className="text-2xl font-bold text-brand.neon">Bull-</span>
+                  <span className="text-2xl font-bold text-brand.mint">Mart</span>
+                </div>
+              </div>
             </Link>
           </div>
           {/*Search box  */}
           <div className="w-[50%] relative">
-            <input
-              type="text"
-              placeholder="Search textbooks, electronics, furniture..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-              className="h-[40px] w-full px-2 border-brand.primary border-[2px] rounded-md bg-brand.dark text-white placeholder-gray-400"
-            />
-            <AiOutlineSearch
-              size={30}
-              className="absolute right-2 top-1.5 cursor-pointer"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search textbooks, electronics, furniture..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="h-[45px] w-full px-4 pr-12 border-2 border-brand.neon rounded-xl bg-brand.dark text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand.neon/50 focus:border-brand.neon transition-all duration-300"
+              />
+              <AiOutlineSearch
+                size={24}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-brand.neon cursor-pointer"
+              />
+            </div>
             {
               // Search data if length is not 0 then show
               searchData && searchData.length !== 0 ? (
@@ -104,12 +114,12 @@ const Header = ({ activeHeading }) => {
           {/* Search end */}
 
           {/* Become a Seller */}
-          <div className={`${styles.button}`}>
+          <div>
             <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
-              <h1 className="text-[#fff] flex items-center">
-                {isSeller ? "Dashboard" : "Start Selling"}{" "}
-                <IoIosArrowForward className="ml-1" />
-              </h1>
+              <div className="bg-gradient-to-r from-brand.neon to-brand.mint hover:from-brand.mint hover:to-brand.neon transition-all duration-300 px-6 py-3 rounded-xl text-black font-semibold flex items-center shadow-lg hover:shadow-brand.neon/25">
+                <span>{isSeller ? "Dashboard" : "Start Selling"}</span>
+                <IoIosArrowForward className="ml-2" />
+              </div>
             </Link>
           </div>
           {/* Become a Seller end */}
@@ -119,8 +129,8 @@ const Header = ({ activeHeading }) => {
       {/*  2nd part of header start */}
       <div
         className={`${
-          active == true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-brand.black h-[70px]`}
+          active == true ? "shadow-lg shadow-brand.neon/10 fixed top-0 left-0 z-10" : null
+        } transition-all duration-300 hidden 800px:flex items-center justify-between w-full bg-gradient-to-r from-brand.black to-brand.dark h-[70px] border-b border-brand.neon/20`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
@@ -130,7 +140,7 @@ const Header = ({ activeHeading }) => {
             <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
               <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
               <button
-                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
+                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-brand.dark border-2 border-brand.neon text-white font-sans text-lg font-[500] select-none rounded-t-md hover:bg-brand.neon hover:text-black transition-all duration-300`}
               >
                 All Categories
               </button>
@@ -160,7 +170,7 @@ const Header = ({ activeHeading }) => {
                 onClick={() => setOpenWishlist(true)}
               >
                 <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
-                <span className="absolute right-0 top-0 rounded-full bg-brand.accent w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+                <span className="absolute right-0 top-0 rounded-full bg-brand.neon w-5 h-5 top right p-0 m-0 text-black font-mono text-[12px] leading-tight text-center font-bold">
                   {wishlist && wishlist.length}
                 </span>
               </div>
@@ -175,7 +185,7 @@ const Header = ({ activeHeading }) => {
                   size={30}
                   color="rgb(255 255 255 / 83%)"
                 />
-                <span className="absolute right-0 top-0 rounded-full bg-brand.accent w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+                <span className="absolute right-0 top-0 rounded-full bg-brand.neon w-5 h-5 top right p-0 m-0 text-black font-mono text-[12px] leading-tight text-center font-bold">
                   {cart && cart.length}
                 </span>
               </div>

@@ -14,8 +14,8 @@ import {
 
 const Footer = () => {
     return (
-        <div className="bg-brand.black text-white">
-            <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-brand.primary py-7">
+        <div className="bg-gradient-to-br from-brand.black to-brand.dark text-white">
+            <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-gradient-to-r from-brand.primary to-brand.forest py-7">
                 <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
                     <span className="text-brand.neon">Join</span> the USF community{" "}
                     <br />
@@ -36,36 +36,39 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
                 <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
-                    <img
-                        src="https://shopo.quomodothemes.website/assets/images/logo.svg"
-                        alt=""
-                        style={{ filter: "brightness(0) invert(1)" }}
-                    />
-                    <br />
-                    <p>USF's student marketplace for sustainable trading and community building.</p>
-                    <div className="flex items-center mt-[15px]">
-                        <AiFillFacebook size={25} className="cursor-pointer" />
+                    <div className="flex items-center space-x-3 mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-brand.neon to-brand.mint rounded-xl flex items-center justify-center shadow-lg">
+                            <span className="text-brand.black font-bold text-2xl">B</span>
+                        </div>
+                        <div>
+                            <h1 className="text-brand.neon text-3xl font-bold">Bull-</h1>
+                            <h1 className="text-brand.mint text-3xl font-bold">Mart</h1>
+                        </div>
+                    </div>
+                    <p className="text-gray-300">USF's student marketplace for sustainable trading and community building.</p>
+                    <div className="flex items-center mt-[15px] space-x-4">
+                        <AiFillFacebook size={25} className="cursor-pointer text-brand.neon hover:text-brand.mint transition-colors duration-300" />
                         <AiOutlineTwitter
                             size={25}
-                            style={{ marginLeft: "15px", cursor: "pointer" }}
+                            className="cursor-pointer text-brand.neon hover:text-brand.mint transition-colors duration-300"
                         />
                         <AiFillInstagram
                             size={25}
-                            style={{ marginLeft: "15px", cursor: "pointer" }}
+                            className="cursor-pointer text-brand.neon hover:text-brand.mint transition-colors duration-300"
                         />
                         <AiFillYoutube
                             size={25}
-                            style={{ marginLeft: "15px", cursor: "pointer" }}
+                            className="cursor-pointer text-brand.neon hover:text-brand.mint transition-colors duration-300"
                         />
                     </div>
                 </ul>
 
                 <ul className="text-center sm:text-start">
-                    <h1 className="mb-1 font-semibold">Company</h1>
+                    <h1 className="mb-1 font-semibold text-brand.neon">Company</h1>
                     {footerProductLinks.map((link, index) => (
                         <li key={index}>
                             <Link
-                                className="text-gray-400 hover:text-teal-400 duration-300
+                                className="text-gray-400 hover:text-brand.neon duration-300
                    text-sm cursor-pointer leading-6"
                                 to={link.link}
                             >
@@ -76,11 +79,11 @@ const Footer = () => {
                 </ul>
 
                 <ul className="text-center sm:text-start">
-                    <h1 className="mb-1 font-semibold">Shop</h1>
+                    <h1 className="mb-1 font-semibold text-brand.neon">Shop</h1>
                     {footercompanyLinks.map((link, index) => (
                         <li key={index}>
                             <Link
-                                className="text-gray-400 hover:text-teal-400 duration-300
+                                className="text-gray-400 hover:text-brand.neon duration-300
                    text-sm cursor-pointer leading-6"
                                 to={link.link}
                             >
@@ -91,11 +94,11 @@ const Footer = () => {
                 </ul>
 
                 <ul className="text-center sm:text-start">
-                    <h1 className="mb-1 font-semibold">Support</h1>
+                    <h1 className="mb-1 font-semibold text-brand.neon">Support</h1>
                     {footerSupportLinks.map((link, index) => (
                         <li key={index}>
                             <Link
-                                className="text-gray-400 hover:text-teal-400 duration-300
+                                className="text-gray-400 hover:text-brand.neon duration-300
                    text-sm cursor-pointer leading-6"
                                 to={link.link}
                             >
