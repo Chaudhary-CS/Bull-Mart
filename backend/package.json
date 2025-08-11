@@ -1,6 +1,7 @@
 {
-  "name": "e-shop-multi-vendor",
+  "name": "bulls-mart-backend",
   "version": "1.0.0",
+  "description": "Backend API for Bulls-Mart USF Student Marketplace",
   "main": "server.js",
   "engines": {
     "node": "18.16.0"
@@ -8,9 +9,21 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
+    "seed": "node seedData.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false"
   },
-  "author": "Om Prakash Pattjoshi",
+  "keywords": [
+    "ecommerce",
+    "marketplace",
+    "usf",
+    "students",
+    "mern",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Kartik Chaudhary <chaudhary417@usf.edu>",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -27,5 +40,12 @@
     "nodemon": "^2.0.20",
     "stripe": "^12.0.0"
   },
-  "description": ""
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chaudhary-CS/Bull-Mart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Chaudhary-CS/Bull-Mart/issues"
+  },
+  "homepage": "https://github.com/Chaudhary-CS/Bull-Mart#readme"
 }
