@@ -13,9 +13,6 @@ const ShopLogin = () => {
     const [password, setPassword] = useState("")
     const [visible, setVisible] = useState(false)
 
-
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -28,7 +25,7 @@ const ShopLogin = () => {
                 },
                 { withCredentials: true }
             ).then((res) => {
-                toast.success("Login Sucess!")
+                toast.success("Login Success!")
                 navigate("/dashboard")
                 window.location.reload(true);
             })
@@ -38,31 +35,34 @@ const ShopLogin = () => {
     };
 
     return (
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
+        <div className='min-h-screen bg-black flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
             <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-                <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                    Login to your Shop
+                <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
+                    Seller Dashboard Login
                 </h2>
+                <p className="mt-2 text-center text-sm text-gray-400">
+                    Access your Bull-Mart seller account
+                </p>
             </div>
-            <div className='mt-8 sm:mx-auto sw:w-full sm:max-w-md'>
-                <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
+            <div className='mt-8 sm:mx-auto sm:w-full sm:max-w-[35rem]'>
+                <div className='bg-gray-800 border border-gray-700 py-8 px-4 shadow-lg sm:rounded-xl sm:px-10 hover:border-green-400 transition-all duration-300'>
                     <form className='space-y-6' onSubmit={handleSubmit} >
                         {/* Email */}
                         <div>
                             <label htmlFor="email"
-                                className='block text-sm font-medium text-gray-700'
+                                className='block text-sm font-medium text-green-400'
                             >
-                                Email address
+                                USF Email Address
                             </label>
                             <div className='mt-1'>
                                 <input type="email"
                                     name='email'
                                     autoComplete='email'
                                     required
-                                    placeholder='Please enter valid email'
+                                    placeholder='Enter your USF email address'
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    className='appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                                    className='appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300'
                                 />
 
                             </div>
@@ -70,28 +70,29 @@ const ShopLogin = () => {
                         {/* Password */}
                         <div>
                             <label htmlFor="password"
-                                className='block text-sm font-medium text-gray-700'
+                                className='block text-sm font-medium text-green-400'
                             >
-                                password
+                                Password
                             </label>
                             <div className='mt-1 relative'>
                                 <input type={visible ? "text" : "password"}
                                     name='password'
-                                    autoComplete='password'
+                                    autoComplete='current-password'
                                     required
+                                    placeholder='Enter your password'
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    className='appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                                    className='appearance-none block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm placeholder-gray-500 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-400 sm:text-sm transition-all duration-300'
                                 />
                                 {visible ? (
                                     <AiOutlineEye
-                                        className="absolute right-2 top-2 cursor-pointer"
+                                        className="absolute right-2 top-2 cursor-pointer text-green-400 hover:text-green-300 transition-colors duration-300"
                                         size={25}
                                         onClick={() => setVisible(false)}
                                     />
                                 ) : (
                                     <AiOutlineEyeInvisible
-                                        className="absolute right-2 top-2 cursor-pointer"
+                                        className="absolute right-2 top-2 cursor-pointer text-green-400 hover:text-green-300 transition-colors duration-300"
                                         size={25}
                                         onClick={() => setVisible(true)}
                                     />
@@ -107,11 +108,11 @@ const ShopLogin = () => {
                                     type="checkbox"
                                     name="remember-me"
                                     id="remember-me"
-                                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                                    className="h-4 w-4 text-green-400 focus:ring-green-400 border-gray-600 rounded bg-gray-700"
                                 />
                                 <label
                                     htmlFor="remember-me"
-                                    className="ml-2 block text-sm text-gray-900"
+                                    className="ml-2 block text-sm text-gray-300"
                                 >
                                     Remember me
                                 </label>
@@ -119,7 +120,7 @@ const ShopLogin = () => {
                             <div className='text-sm'>
                                 <a
                                     href=".forgot-password"
-                                    className="font-medium text-blue-600 hover:text-blue-500"
+                                    className="font-medium text-green-400 hover:text-green-300 transition-colors duration-300"
                                 >
                                     Forgot your password?
                                 </a>
@@ -128,16 +129,16 @@ const ShopLogin = () => {
                         <div>
                             <button
                                 type='submit'
-                                className=' className="group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"'
+                                className='group relative w-full h-[40px] flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-green-400 hover:bg-green-500 transition-all duration-300 shadow-lg hover:shadow-green-400/25'
                             >
-                                Submit
+                                Sign In
                             </button>
                         </div>
 
-                        <div className={`${styles.noramlFlex} w-full`} >
-                            <h4>Not have any account</h4>
-                            <Link to="/shop-create" className="text-blue-600 pl-2">
-                                Sign Up
+                        <div className={`${styles.noramlFlex} w-full justify-center`} >
+                            <h4 className="text-gray-300">Don't have a seller account?</h4>
+                            <Link to="/shop-create" className="text-green-400 hover:text-green-300 pl-2 transition-colors duration-300">
+                                Register as Seller
                             </Link>
                         </div>
                     </form>
