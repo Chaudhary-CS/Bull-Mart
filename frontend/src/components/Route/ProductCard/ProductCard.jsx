@@ -25,6 +25,14 @@ const ProductCard = ({ data, isEvent }) => {
     const [open, setOpen] = useState(false);
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        if (data && wishlist && wishlist.find((i) => i._id === data._id)) {
+            setClick(true);
+        } else {
+            setClick(false);
+        }
+    }, [wishlist, data]);
+
     // Add safety check for data
     if (!data) {
         return (
@@ -36,14 +44,6 @@ const ProductCard = ({ data, isEvent }) => {
             </div>
         );
     }
-
-    useEffect(() => {
-        if (wishlist && wishlist.find((i) => i._id === data._id)) {
-            setClick(true);
-        } else {
-            setClick(false);
-        }
-    }, [wishlist]);
 
     // Remove from wish list 
     const removeFromWishlistHandler = (data) => {
