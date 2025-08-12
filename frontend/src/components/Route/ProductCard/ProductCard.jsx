@@ -25,6 +25,18 @@ const ProductCard = ({ data, isEvent }) => {
     const [open, setOpen] = useState(false);
     const dispatch = useDispatch();
 
+    // Add safety check for data
+    if (!data) {
+        return (
+            <div className='w-full h-[420px] bg-gray-800 rounded-lg shadow-lg p-3 relative border border-gray-700 flex items-center justify-center'>
+                <div className='text-gray-400 text-center'>
+                    <div className='text-lg mb-2'>⚠️</div>
+                    <div>Item not available</div>
+                </div>
+            </div>
+        );
+    }
+
     useEffect(() => {
         if (wishlist && wishlist.find((i) => i._id === data._id)) {
             setClick(true);
@@ -52,8 +64,8 @@ const ProductCard = ({ data, isEvent }) => {
             return;
         }
         
-        const contactInfo = data.contactInfo;
-        const method = data.contactMethod;
+        const contactInfo = data.contactInfo || data.seller?.email || 'Contact info not available';
+        const method = data.contactMethod || 'Email';
         
         if (method === "Phone") {
             window.open(`tel:${contactInfo}`);
@@ -97,8 +109,8 @@ const ProductCard = ({ data, isEvent }) => {
             <div className='w-full h-[420px] bg-gray-800 rounded-lg shadow-lg p-3 relative cursor-pointer border border-gray-700 hover:border-green-400 hover:shadow-green-400/20 transition-all duration-300 group'>
                 {/* Status Badge */}
                 <div className='absolute top-2 left-2 z-10'>
-                    <span className={`px-2 py-1 text-xs font-semibold rounded-full text-white ${getConditionColor(data.condition)}`}>
-                        {data.condition}
+                    <span className={`px-2 py-1 text-xs font-semibold rounded-full text-white ${getConditionColor(data.condition || 'Good')}`}>
+                        {data.condition || 'Good'}
                     </span>
                 </div>
 
@@ -121,7 +133,7 @@ const ProductCard = ({ data, isEvent }) => {
 
                 <Link to={`/product/${data._id}`}>
                     <h4 className='pb-2 font-[500] text-white group-hover:text-green-400 transition-colors duration-300'>
-                        {data.title.length > 40 ? data.title.slice(0, 40) + '...' : data.title}
+                        {data.title && data.title.length > 40 ? data.title.slice(0, 40) + '...' : (data.title || 'Untitled Item')}
                     </h4>
 
                     {/* Seller Info */}
@@ -138,14 +150,14 @@ const ProductCard = ({ data, isEvent }) => {
 
                     {/* Location */}
                     <div className='text-sm text-gray-400 pb-2'>
-                        📍 {data.location}
+                        📍 {data.location || 'USF Campus'}
                     </div>
 
                     {/* Price */}
                     <div className='py-2 flex items-center justify-between'>
                         <div className='flex items-center gap-2'>
                             <h5 className='text-lg font-bold text-green-400'>
-                                ${data.price}
+                                ${data.price || 0}
                             </h5>
                             {data.negotiable && (
                                 <span className='text-xs text-gray-400'>or best offer</span>
@@ -161,7 +173,7 @@ const ProductCard = ({ data, isEvent }) => {
                     {/* Posted Time */}
                     <div className='flex items-center gap-1 text-xs text-gray-500 pb-2'>
                         <AiOutlineClockCircle size={12} />
-                        <span>{getTimeAgo(data.createdAt)}</span>
+                        <span>{data.createdAt ? getTimeAgo(data.createdAt) : 'Recently'}</span>
                     </div>
                 </Link>
 
