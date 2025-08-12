@@ -9,7 +9,6 @@ import {
     AiOutlineMessage,
     AiOutlineStar,
     AiOutlineClockCircle,
-    AiOutlineEye,
     AiOutlineUser,
 } from "react-icons/ai";
 import { backend_url } from "../../../server";
